@@ -1,0 +1,374 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+} 
+html{
+    /* aqui se cambiaron las propiedades de las letras del menu -- se tiene que corregir -- */
+    font-size: 10px;
+} 
+
+body {
+    font-family: 'FontAwesome', sans-serif;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+
+header {
+    width: 100%;
+    background: rgb(27, 0, 53);
+    position: fixed;
+    z-index: 1;
+}
+
+.menu {
+    width: 95%;
+    max-width: 1200px;
+    margin: auto;
+    padding: .5em 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+/* Aqui se alinea la palabra docqui del header y se le cambia el tamaño */
+.menu .container-menu .logo .logo-name a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 19px;
+    margin-left: 9px;
+    font-weight: normal;
+}
+
+.menu .container-menu .logo .logo-name{
+    display: flex;
+    align-items: center;
+}
+
+/* Aqui se cambia el tamaño del logo en el menu */
+.menu .container-menu .logo .logo-name img {
+    width: 50px;
+}
+
+/* Aqui se cambia el tamaño de las barritas del menu */
+.menu .container-menu .logo .btn-menu {
+    display: none;
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+}
+
+/* Aqui van los enlaces */
+
+.menu .menu-link ul {
+    list-style: none;
+}
+
+.menu .menu-link ul li {
+    display: inline-block;
+}
+/* Aqui estan las propiedades de los enlaces, tamaño y color */
+.menu .menu-link ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin-left: 12px;
+    font-size: 1.0em;
+    /* aqui cambiamos la animacion del mouse en los enlaces*/
+    border-bottom: 2px solid transparent;
+    transition: .3s;
+}
+
+/* mause cuando pase arriba */
+
+.menu .menu-link ul li a:hover {
+    border-bottom: 2px solid rgb(4, 205, 255);
+    color: rgb(0, 217, 255);
+}
+/* el banner empieza en el minuto 24
+imagen de fondo aqui se cambian las propiedades
+de la imagen */
+.banner {
+    position: relative;
+    background: url(../img/background.png);
+    width: 100%;
+    max-width: 1200px;
+    top: 52px;
+    margin: auto;
+    height: 570px;
+    color: #fff;
+}
+
+.banner .bg-details {
+        position: relative;
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        -ms-flex-align: wrap;
+        text-align: center;
+}
+
+.banner .bg-details .details h1 {
+    font-size:  40px;
+    font weight: normal;
+    margin-bottom: 20px;
+}
+
+.banner .bg-details .details a {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    border: 2px solid rgb(0, 217, 255);
+    padding: 10px 25px;
+    border-radius: 19px; 
+}
+
+/* aqui termina el baner e imagen */
+
+/* Aqui esta el efecto del menu dezpegable */
+@media screen and (max-width: 700px){
+    .menu .container-menu .logo .btn-menu {
+        display: block;
+    }
+/* Aqui la posicion de las barritas del menu */
+    .menu .container-menu{
+        width: 100%;
+    }
+
+/* Icono del menu despegable las barritas XD */
+    .menu .container-menu .logo {
+        display: flex;
+        -ms-aling-items: center;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* Aqui esta el sombreado del menu y la posicion del menu 
+    con sombreado negro en donde dice top lo cambiamos */
+    .menu .menu-link{
+        position: absolute;
+        background: rgba(0, 0, 0,.7);
+        height: 100vh;
+        width: 100%;
+        /* aqui se me movio el tope del menu por la galeria su valor noermal tiene que ser de 74*/
+        top: 68px;
+        left: -100%;
+        z-index: 1000;
+        transition: .3s;
+    }
+    .menu .menu-link ul li {
+        display: block;
+    }
+    .menu .menu-link ul li a {
+        display: block;
+        height: 50px;
+        border-bottom: 2px solid #fff;
+        padding: 15px;
+        text-align: center;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .menu .container-menu .logo .logo-name a{
+        /* aqui se cambia el tamaño de las letras para la version movil  --- antes era*/
+        font-size: 19px;
+        font-style: italic;
+    }
+    .banner .bg-details .details h1 {
+        font-size: 30px;
+    }
+
+    .banner .bg-details .details a {
+        font-size:  16px;
+        padding: 8px 15px;
+    }
+
+}
+ 
+/* cartas de presentacion */
+a{
+    text-decoration: none;
+    color: #fff;
+}
+section{
+    padding: 10rem 0;
+    background-color: #fff;
+}
+
+.heading{
+    text-transform: uppercase;
+    /* aqui se cambia el tamaño de las letras de titulo*/
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+    margin-right: -3px;
+    /* aqui se cambia la posicion de las cartas */
+    margin-bottom: 2rem;
+    text-align: center;
+    /* color de las letras*/
+    color: rgb(0, 38, 56);
+    position: relative;
+}
+.heading::after{
+    content: "";
+    width: 10rem;
+    height: .8rem;
+    background-color: #00ffc8;
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2rem;
+
+}
+.card-wrapper{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.card{
+    width: 32rem;
+    /* color de la tarjeta */
+    background-color: rgb(241, 241, 241);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+    box-shadow: .5rem 3rem rgba(0, 0, 0, 0, 2);
+}
+.card .card-img{
+    width: 100%;
+    height: 26rem;
+    object-fit: cover;
+    /* aqui se cambia la forma de la imagen en esta pagina copiamos el codigo https://bennettfeely.com/clippy/ */
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 54%, 0% 100%);
+clip-path: polygon(0 0, 100% 0, 100% 54%, 0% 100%);
+}
+.profile-img{
+    width: 19rem;
+    height: 19rem;
+    object-fit: cover;
+    border-radius: 50%;
+    /* aqui cambiamos la posision de la imagen y del cuadro de abajo*/
+    margin-top: -11rem;
+    /* cambie el index por un relative     z-index: 999;  */
+    position: relative;
+    /* aqui cambiamos el color de trazo de la imagen */
+    border: .5rem solid #00d9ff;
+}
+.card h1{
+    font-size: 2.5rem;
+    color: rgb(16, 0, 59);
+    margin: 1.5rem 0;
+}
+
+.job-tittle{
+    color: rgb(43, 0, 40);
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+.about{
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    text-align: center;
+    color: rgb(48, 0, 53);
+}
+.card .btn{
+    padding: 1rem 2.5rem;
+    background-color: #00eeff;
+    border-radius: 2rem;
+    margin: 1rem 0;
+    text-transform: uppercase;
+    /* aqui esrta el color de las letras del boton*/
+    color: rgb(41, 0, 51);
+    font-size: 1.4rem;
+    transition: all .5s;
+}
+.card .btn:hover{
+    transform: translateY(-2px);
+    box-shadow: .5rem .5rem 2rem rgb(255, 0, 255);
+}
+
+.card .btn:active{
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.social-media{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem 0;
+    margin-top: 1.5rem;
+    border-top: 1px solid rgba( 0, 0, 0, .1);
+}
+.social-media i{
+    font-size: 3rem;
+    transition: color .5s;
+}
+.fa-facebook-square{
+    color: #006eff;
+}
+.fa-twitter-square{
+    color: #00aeff;
+}
+.fa-instagram{
+    color: #e100ff;
+}
+.fa-youtube-square{
+    color: #ff0000;
+}
+.fa-facebook-square:hover,
+.fa-twitter-square:hover,
+.fa-instagram:hover,
+.fa-youtube-squarehover{
+    color: #00d9ff;
+}
+@media screen and (min-width 700px){
+    .card-wrapper{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center; 
+    }
+    .card{
+        margin: 2rem;
+    } 
+    @keyframes fadeIn{
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+        .card:nth-child(1){
+            animation: fadeIn .5s .5s backwards;
+        }
+        .card:nth-child(2){
+            animation: fadeIn .5s .1s backwards;
+        }
+
+        .card:nth-child(3){
+            animation: fadeIn .5s 1.5s backwards;
+        }
+
+        .card:nth-child(4){
+            animation: fadeIn .5s .2s backwards;
+        }    
+}
